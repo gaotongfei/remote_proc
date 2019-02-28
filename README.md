@@ -1,5 +1,19 @@
 # remote_proc
 
-Learn by doing it, implement a RPC client and server after reading Jesse Storimer's [Working With TCP Sockets](https://www.jstorimer.com/products/working-with-tcp-sockets)
+## Usage
 
-Still under development.
+* server
+```
+bin/remote_proc -b 127.0.0.1 -p 8099 -c 10 --commands-dir="./commands_example"
+```
+
+* client
+
+```
+$ bundle console
+
+# in console
+RemoteProc.call('hello', {name: 'tongfei'})
+```
+
+
