@@ -22,6 +22,9 @@ module RemoteProc
           opts[:host] = arg
         end
 
+        o.on '', '--commands-dir FOLDER', 'directory where commands file are stored' do |arg|
+          opts[:commands_dir] = arg
+        end
       end
 
       @parser.banner = 'remote_proc [options]'

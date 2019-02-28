@@ -1,7 +1,10 @@
 require 'socket'
+require 'logger'
 require 'remote_proc/client'
 require 'remote_proc/server'
 require 'remote_proc/version'
+require 'remote_proc/procedure'
+require 'remote_proc/logging'
 
 module RemoteProc
   extend self

@@ -1,4 +1,5 @@
 require 'socket'
+require 'json'
 
 module RemoteProc
   class Client
@@ -7,7 +8,7 @@ module RemoteProc
     end
 
     def call(command, params)
-      @client.write({ command: command, params: params })
+      @client.write({ command: command, params: params }.to_json)
       @client.write("\r\n")
       @client.close_write
       puts @client.read
