@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/remote_proc/server'
+require_relative '../lib/remote_proc/server/multi_threaded'
 require_relative '../lib/remote_proc/cli'
 
 options = RemoteProc::CLI.parse_options
-server = RemoteProc::Server.new(options)
+server = RemoteProc::Server::MultiThreaded.new(options)
 server.run

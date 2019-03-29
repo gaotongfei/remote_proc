@@ -12,6 +12,7 @@ module RemoteProc
       @client.write("\r\n")
       @client.close_write
       puts @client.read
+      @client.close_read
     end
   end
 end
